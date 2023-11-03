@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Aleo } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const aleo = Aleo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +16,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={aleo.className}>
+        <header className='bg-beangreen bg-[url("/Header_bg.svg")] bg-center bg-cover left-0 right-0 sticky'>
+          <div className='justify-between flex mx-10'>
+            <div className='py-5 text-3xl'>
+              <a href='/' className='hover:text-lightbeangreen duration-100 ease-in-out'>Bean and Brew</a>
+            </div>
+            <div>
+              <div className='py-6 text-2xl '>
+                <a className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Products</a>
+                <a className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Pick-up</a>
+                <a className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Booking</a>
+                <a className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Login</a>
+              </div>
+            </div>
+          </div>
+        </header>
+        {children}</body>
     </html>
   )
 }
