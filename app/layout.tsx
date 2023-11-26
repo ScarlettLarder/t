@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Aleo } from 'next/font/google'
 import './globals.css'
-
+import Link from 'next/link'
 const aleo = Aleo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -27,7 +27,10 @@ export default function RootLayout({
                 <a className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Products</a>
                 <a className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Pick-up</a>
                 <a className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Booking</a>
-                <a className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Login</a>
+                <Link href={"/login"}>
+                  <p className='hover:text-lightbeangreen duration-100 ease-in-out mr-5'>Login</p>
+                </Link>
+                
               </div>
             </div>
           </div>

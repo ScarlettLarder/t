@@ -10,7 +10,7 @@ export default function Login() {
                 <input className="bg-green-600 hover:bg-green-700 rounded-xl px-4 py-2" type="submit" value="Submit"></input>
             </form>
             <div className="pt-10">
-                <span className="pl-24 mt-10 ">Dont have an account? <a href="signup" className="text-green-700">Click here</a></span>
+                <span className="pl-24 mt-10 ">Dont have an account? <a href="/signup" className="text-green-700">Click here</a></span>
             </div>
         </main>
     )
