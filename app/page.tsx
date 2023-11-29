@@ -1,8 +1,16 @@
 import Image from 'next/image'
+import { authOptions } from './api/auth/[...nextauth]/route'
+import { getServerSession } from 'next-auth'
+import { User } from './user'
+export default async function Home() {
 
-export default function Home() {
+  const session = await getServerSession(authOptions)
+
   return (
     <main>
+      <pre>{JSON.stringify(session)}</pre>
+      <p>Client Call example:</p>
+      <User />
       <div className='grid grid-cols-2 my-10'>
         <div className='my-30 ml-32 flex justify-center items-center'>
           <div className=''>

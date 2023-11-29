@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Aleo } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import { Providers } from './providers'
 const aleo = Aleo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={aleo.className}>
+        <Providers>
         <header className='bg-beangreen bg-[url("/Header_bg.svg")] bg-center bg-cover left-0 right-0 sticky'>
           <div className='justify-between flex mx-10'>
             <div className='py-5 text-3xl'>
@@ -35,7 +37,9 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        {children}</body>
+        {children}
+        </Providers>
+        </body>
     </html>
   )
 }
